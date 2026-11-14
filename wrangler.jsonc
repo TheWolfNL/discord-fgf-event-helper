@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fgf-events",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  // Config lives in the dashboard (Variables and Secrets) so deploys never overwrite it.
+  "keep_vars": true,
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "fgf-events",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy && tsx scripts/register.ts --optional",
+    "register": "tsx scripts/register.ts",
+    "banners": "tsx tools/banners/generate.ts",
+    "types": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "discord-interactions": "^4.4.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.162.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261113.1": true
+  },
+  "cloudflare": {
+    "bindings": {
+      "DISCORD_APPLICATION_ID": {
+        "description": "Discord Developer Portal → your app → **General Information** → Application ID."
+      },
+      "DISCORD_PUBLIC_KEY": {
+        "description": "Discord Developer Portal → your app → **General Information** → Public Key."
+      },
+      "DISCORD_BOT_TOKEN": {
+        "description": "Discord Developer Portal → your app → **Bot** → Reset Token."
+      },
+      "EVENT_CHANNEL_ID": {
+        "description": "Right-click the event channel in Discord → **Copy Channel ID** (needs Developer Mode)."
+      },
+      "ALLOWED_ROLE_ID": {
+        "description": "Optional. Right-click the role → **Copy Role ID**. Leave as `-` to skip the extra role check."
+      }
+    }
+  }
+}
