@@ -19,7 +19,9 @@ async function handleInteraction(req: Request, env: Env, ctx: ExecutionContext, 
     case InteractionType.PING:
       // Discord pings when the endpoint URL is saved, which makes it a convenient moment to register commands.
       ctx.waitUntil(
-        registerCommands(env.DISCORD_APPLICATION_ID, env.DISCORD_BOT_TOKEN, COMMANDS).catch((e) => console.error(e)),
+        registerCommands(env.DISCORD_APPLICATION_ID, env.DISCORD_BOT_TOKEN, COMMANDS)
+          .then((r) => console.log(`Registered ${r.length} command(s)`))
+          .catch((e) => console.error(e)),
       );
       return json({ type: InteractionResponseType.PONG });
     case InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE:
