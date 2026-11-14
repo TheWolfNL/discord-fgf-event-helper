@@ -7,7 +7,7 @@ Settings live in Cloudflare, not in the code, so changing them never needs a
 code change and deploys never overwrite them.
 
 1. Open the [Cloudflare dashboard](https://dash.cloudflare.com) →
-   **Workers & Pages** → `fgf-events`.
+   **Workers & Pages** → `discord-fgf-event-helper`.
 2. Go to **Settings** → **Variables and Secrets**.
 3. Click **Edit** next to the value, enter the new value, and click
    **Deploy**.

@@ -9,7 +9,7 @@ title: 3. Connect Discord to the Worker
    `/interactions`:
 
    ```
-   https://fgf-events.<your-account>.workers.dev/interactions
+   https://discord-fgf-event-helper.<your-account>.workers.dev/interactions
    ```
 
 3. Click **Save Changes**.

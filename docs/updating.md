@@ -10,7 +10,7 @@ in the latest version:
 2. Click **Sync fork** → **Update branch**.
 
 Cloudflare sees the new commit and redeploys within a minute or two. You can
-follow it in the Cloudflare dashboard → **Workers & Pages** → `fgf-events` →
+follow it in the Cloudflare dashboard → **Workers & Pages** → `discord-fgf-event-helper` →
 **Deployments**.
 
 If GitHub doesn't show **Sync fork** (Cloudflare created a plain copy rather

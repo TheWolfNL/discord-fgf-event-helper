@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "fgf-events",
+  "name": "discord-fgf-event-helper",
   "main": "src/index.ts",
   "compatibility_date": "2026-11-01",
   "assets": {
